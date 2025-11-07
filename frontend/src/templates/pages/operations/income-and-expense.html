@@ -1,0 +1,93 @@
+<!--Заголовок-->
+<div class="p-5 mt-5">
+    <h1 class="text-info">Доходы и расходы</h1>
+</div>
+<!--Кнопки создания дохода и расхода-->
+<div class="pl-5 pb-5">
+    <a href="/income-and-expense-creation?type=income"
+       class="btn btn-success p-2 pl-3 pr-3 rounded font-weight-medium"
+       id="btn-add-income">Создать доход</a>
+    <a href="/income-and-expense-creation?type=expense"
+       class="btn btn-danger ml-2 p-2 pl-3 pr-3 rounded font-weight-medium"
+       id="btn-add-expense">Создать расход</a>
+</div>
+<!--Кнопки с различными периодами года-->
+<div class="d-flex align-items-center pl-5 pb-5">
+    <div>
+        <button type="button" class="btn btn-block btn-outline-secondary btn-fixed font-weight-medium active"
+                id="btn-today">
+            Сегодня
+        </button>
+    </div>
+    <div>
+        <button type="button" class="btn btn-block btn-outline-secondary btn-fixed ml-3 font-weight-medium"
+                id="btn-week">Неделя
+        </button>
+    </div>
+    <div>
+        <button type="button" class="btn btn-block btn-outline-secondary btn-fixed ml-3 font-weight-medium"
+                id="btn-month">Месяц
+        </button>
+    </div>
+    <div>
+        <button type="button" class="btn btn-block btn-outline-secondary btn-fixed ml-3 font-weight-medium"
+                id="btn-year">Год
+        </button>
+    </div>
+    <div>
+        <button type="button" class="btn btn-block btn-outline-secondary btn-fixed ml-3 font-weight-medium"
+                id="btn-all-periods-calendar">
+            Все
+        </button>
+    </div>
+    <div>
+        <button type="button" class="btn btn-block btn-outline-secondary btn-fixed ml-3 font-weight-medium"
+                id="btn-interval">Интервал
+        </button>
+    </div>
+    <!--Даты-->
+    <div>
+        <span class="ml-3">c</span>
+        <a class="ml-3 text-secondary" style="text-decoration: underline" href="#">Дата</a>
+        <span class="ml-3">по</span>
+        <a class="ml-3 text-secondary" style="text-decoration: underline" href="#">Дата</a>
+    </div>
+</div>
+<!--Таблица со списком-->
+<div class="d-flex align-items-center pl-5 pr-5">
+    <table class="table text-center table-clean-header" id="operations-table">
+        <thead>
+        <tr>
+            <th>№ операции</th>
+            <th>Тип</th>
+            <th>Категория</th>
+            <th>Сумма</th>
+            <th>Дата</th>
+            <th>Комментарий</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody id="records">
+        <!-- Данные будут загружены в JavaScript -->
+        </tbody>
+    </table>
+</div>
+
+<!-- модальное окно -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content elevation-0 border-0 p-3 rounded-12">
+            <h5 class="modal-body text-center py-2 px-3 text-info-emphasis">
+                Вы действительно хотите удалить операцию?
+            </h5>
+            <div class="modal-footer d-flex justify-content-center border-top-0 pt-1 pb-3 px-3">
+                <button type="button" class="btn btn-custom btn-success mr-2 rounded font-weight-medium">Да, удалить
+                </button>
+                <button type="button" class="btn btn-custom btn-danger rounded font-weight-medium" data-dismiss="modal">
+                    Не удалять
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+

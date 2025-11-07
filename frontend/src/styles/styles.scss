@@ -1,0 +1,227 @@
+.text-info {
+  color: #052C65 !important;
+}
+
+.text-info-emphasis {
+  color: #290661 !important;
+}
+
+.btn-fixed {
+  width: 100px !important;
+  height: 37px !important;
+}
+
+.rounded {
+  border-radius: 5px !important;
+}
+
+.rounded-12 {
+  border-radius: 12px !important;
+}
+
+.font-weight-medium {
+  font-weight: 500 !important;
+}
+
+body {
+  background-color: #fff !important;
+}
+
+.line-custom {
+  border-right: 1px solid #D9D9D9;
+  height: 405px;
+}
+
+/* Синий текст для конкретных пунктов в сайдбаре */
+.nav-treeview {
+  .custom-bg-link {
+    .nav-link {
+      color: #007bff !important;
+
+      &:hover {
+        color: white !important;
+      }
+    }
+  }
+}
+
+/* При наведении — синий фон + белый текст */
+.nav-link:hover {
+  background-color: #007bff !important;
+  color: white !important;
+
+  svg {
+    .icon_white {
+      fill: #fff !important;
+    }
+  }
+}
+
+/* Стили для активного пункта меню */
+.nav-sidebar > .nav-item > .nav-link.active {
+  background-color: #007bff !important;
+  color: white !important;
+
+  svg {
+    .icon_white {
+      fill: #fff !important;
+    }
+  }
+}
+
+/* Для подпунктов в дереве */
+.nav-treeview .nav-item .nav-link.active {
+  background-color: #007bff !important;
+  color: white !important;
+}
+
+/* Синий текст для активных подпунктов */
+.nav-treeview .custom-bg-link .nav-link.active {
+  color: white !important;
+  background-color: #007bff !important;
+}
+
+
+// Скрываем хедер на десктопе (>768px)
+@media (min-width: 991px) {
+  .main-header {
+    display: none !important;
+  }
+}
+
+// На мобильных устройствах (<=768px) — хедер виден
+@media (max-width: 991px) {
+  .main-header {
+    display: flex !important;
+  }
+}
+
+.main-header.navbar {
+  border-bottom: none !important;
+}
+
+//Тонкая линия для таблицы на главной (доходы - расходы)
+.table-clean-header {
+  border-top: none !important;
+  border-collapse: collapse !important;
+}
+
+.table-clean-header thead th {
+  border-bottom: 1px solid #dee2e6 !important;
+}
+
+.table-clean-header tbody td {
+  border-top: 1px solid #dee2e6;
+}
+
+// Выравнивание содержимого ячеек по вертикали по центру
+.table-clean-header th,
+.table-clean-header td {
+  vertical-align: middle !important;
+}
+
+// Нижняя граница последней строки таблицы
+.table-clean-header tbody tr:last-child td {
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Вертикальная серая полоска справа от сайдбара */
+.main-sidebar {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #dee2e6;
+    z-index: 1000;
+  }
+}
+
+/* Стили для горизонтальных разделителей сайдбара */
+.sidebar-divider {
+  height: 1px;
+  margin: 1rem 0;
+  overflow: hidden;
+  background-color: #dee2e6;
+  border: none;
+}
+
+.brand-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .image {
+    i.fa {
+      color: #D9D9D9;
+      font-size: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+/* Выравнивание текста слева */
+.nav-sidebar {
+  .nav-link {
+    > p,
+    > span {
+      text-align: left !important;
+      width: 100%;
+      margin-right: auto;
+    }
+  }
+
+  .nav-item.has-treeview {
+    > .nav-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-treeview {
+      .nav-link {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+// Скрываем ссылку выхода, показываем при нажатии
+.user-panel {
+  .logout-link {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    .fas {
+      font-size: 1rem;
+    }
+  }
+
+  &:hover .logout-link {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+
+
